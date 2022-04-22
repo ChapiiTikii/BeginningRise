@@ -53,7 +53,7 @@
 <div id="title-sect">
 <h1>BD BeginningRise<br> Diccionario de Datos</h1>
 <p>
-<em>2022-03-20</em>
+<em>2022-04-07</em>
 </p>
 <p class="proj-desc">
 <em></em>
@@ -66,7 +66,7 @@
 <li><a href='#clientes'>clientes</a></li>
 <li><a href='#clientes_has_productos'>clientes_has_productos</a></li>
 <li><a href='#componentes'>componentes</a></li>
-<li><a href='#graficas'>graficas</a></li>
+<li><a href='#grafica'>grafica</a></li>
 <li><a href='#marcas'>marcas</a></li>
 <li><a href='#memoria_ram'>memoria_ram</a></li>
 <li><a href='#modelos'>modelos</a></li>
@@ -88,7 +88,6 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Foránea'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
@@ -109,7 +108,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar todos los tipos de documento en su abreviación ejemplo: CC - TI - CE...</td>
+    <td>FK - tipo_documento_persona: Sr(a) en este campo podrá almacenar todos los tipos de documento en su abreviación ejemplo: CC, TI, CE...</td>
 </tr>
 <tr>
     <td>num_doc_administrador</td>
@@ -122,7 +121,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el número de documento que certifique que es un administrador ejemplo: 1.006.366.455...</td>
+    <td>FK - num_doc_persona: Sr(a) en este campo podrá almacenar el número de documento que certifique que es un administrador ejemplo: 1.006.366.455...</td>
 </tr>
 <table id='almacenamiento'>
 <caption>almacenamiento</caption>
@@ -131,9 +130,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -152,7 +150,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código de cada tipo de almacenamiento </td>
+    <td>FK - id_componente: Sr(a) en este campo podrá almacenar el código de cada tipo de almacenamiento</td>
 </tr>
 <tr>
     <td>interfaz</td>
@@ -165,7 +163,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar podrá almacenar el tipo de la interfaz de transferencia de datos que posee ejemplo: SATA, PCIe</td>
+    <td>Sr(a) en este campo podrá almacenar el tipo de la interfaz de transferencia de datos que posee ejemplo: SATA, PCIe...</td>
 </tr>
 <table id='clientes'>
 <caption>clientes</caption>
@@ -174,9 +172,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -195,7 +192,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el tipo de documento de identidad de que le pertenezca, por ejemplo: CC, CE, TI...</td>
+    <td>FK - tipo_documento_persona: Sr(a) en este campo podrá almacenar el tipo de documento de identidad de que le pertenezca, por ejemplo: CC, CE, TI...</td>
 </tr>
 <tr>
     <td>num_doc_cliente</td>
@@ -208,7 +205,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el número de su documento de identidad como cliente</td>
+    <td>FK - num_doc_persona: Sr(a) en este campo podrá almacenar el número de su documento de identidad como cliente</td>
 </tr>
 <tr>
     <td>direccion_cliente</td>
@@ -234,7 +231,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el número telefónico de contacto personal</td>
+    <td>Sr(a) en este campo podrá almacenar el número telefónico de contacto personal ejemplo: 3204564663...</td>
 </tr>
 <table id='clientes_has_productos'>
 <caption>clientes_has_productos</caption>
@@ -243,9 +240,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -264,7 +260,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - tipo_doc_cliente: Sr(a) en este campo podra evidenciar la relación entre cliente y producto</td>
 </tr>
 <tr>
     <td>num_doc_cliente</td>
@@ -277,7 +273,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - num_doc_cliente: Sr(a) en este campo podra evidenciar la relación entre cliente y producto</td>
 </tr>
 <tr>
     <td>serial_producto</td>
@@ -290,7 +286,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - serial_producto: Sr(a) en este campo podra evidenciar la relación entre cliente y producto</td>
 </tr>
 <table id='componentes'>
 <caption>componentes</caption>
@@ -299,9 +295,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -310,7 +305,7 @@
     <th>Commentarios</th>
 </tr>
 <tr>
-    <td>idcomponente</td>
+    <td>id_componente</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -335,16 +330,15 @@
     <td></td>
     <td>Sr(a) en este campo podrá almacenar el nombre del componente en específico, por ejemplo: RAM, GRÁFICA...</td>
 </tr>
-<table id='graficas'>
-<caption>graficas</caption>
+<table id='grafica'>
+<caption>grafica</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -363,7 +357,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código de la gráfica que va a ingresar</td>
+    <td>FK - id_componente: Sr(a) en este campo podrá almacenar el código de la gráfica que va a ingresar</td>
 </tr>
 <tr>
     <td>vram_grafica</td>
@@ -376,7 +370,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar la información de la memoria de la tarjeta grafica</td>
+    <td>Sr(a) en este campo podrá almacenar la información de la memoria de la tarjeta grafica ejemplo 8GB VRAm, 4GB VRAM...</td>
 </tr>
 <table id='marcas'>
 <caption>marcas</caption>
@@ -385,9 +379,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -419,7 +412,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el nombre de la marca del producto</td>
+    <td>Sr(a) en este campo podrá almacenar el nombre de la marca </td>
 </tr>
 <tr>
     <td>estado</td>
@@ -441,9 +434,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -462,7 +454,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código con el que está ligado a las memorias ram</td>
+    <td>FK - id_componente: Sr(a) en este campo podrá almacenar el código con el que está ligado a las memorias ram</td>
 </tr>
 <tr>
     <td>frecuencia_ram</td>
@@ -475,7 +467,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar la frecuencia que maneja la memoria ram según sus especificaciones, por ejemplo: -3200MHz, 2666MHz</td>
+    <td>Sr(a) en este campo podrá almacenar la frecuencia que maneja la memoria ram según sus especificaciones, por ejemplo: -3200MHz, 2666MHz...</td>
 </tr>
 <table id='modelos'>
 <caption>modelos</caption>
@@ -484,9 +476,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -531,7 +522,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código de la marca del producto que va ligado con el modelo</td>
+    <td>FK - id_marcas: Sr(a) en este campo podrá almacenar el código de la marca del producto que va ligado con el modelo</td>
 </tr>
 <table id='pantallas'>
 <caption>pantallas</caption>
@@ -540,9 +531,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -561,7 +551,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código sujeto a la pantalla correspondiente</td>
+    <td>FK - id_componente: Sr(a) en este campo podrá almacenar el código sujeto a la pantalla correspondiente</td>
 </tr>
 <tr>
     <td>tasa_refresco_pantalla</td>
@@ -574,10 +564,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar las tasas de refresco que tiene la pantalla en específico</td>
+    <td>Sr(a) en este campo podrá almacenar las tasas de refresco que tiene la pantalla en específico ejemplo: 120Hz, 144Hz...</td>
 </tr>
 <tr>
-    <td>resolucion_pantalla</td>
+    <td>tama,o_pantalla</td>
     <td>VARCHAR(15)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
@@ -587,7 +577,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar la resolución que tiene cada una de las pantallas según su código</td>
+    <td>Sr(a) en este campo podrá almacenar el tamaño que tiene cada una de las pantallas según su código ejemplo: 15.6", 17.3"...</td>
 </tr>
 <table id='persona'>
 <caption>persona</caption>
@@ -596,9 +586,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -617,7 +606,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el tipo de documento de la persona seleccionada ejemplo: CC, CE, TI</td>
+    <td>FK - t_doc: Sr(a) en este campo podrá almacenar el tipo de documento de la persona seleccionada ejemplo: CC, CE, TI...</td>
 </tr>
 <tr>
     <td>num_doc_persona</td>
@@ -630,7 +619,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el número de documento de identidad de cada persona</td>
+    <td>Sr(a) en este campo podrá almacenar el número de documentó de identidad de cada persona.</td>
 </tr>
 <tr>
     <td>p_nombre_persona</td>
@@ -695,7 +684,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el correo electrúnico de contacto de la persona seleccionada</td>
+    <td>Sr(a) en este campo podrá almacenar el correo electrónico de contacto de la persona seleccionada</td>
 </tr>
 <tr>
     <td>contraseña_persona</td>
@@ -717,9 +706,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -738,7 +726,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código asignado al procesador</td>
+    <td>FK - id_componentes: Sr(a) en este campo podrá almacenar el código asignado al procesador</td>
 </tr>
 <tr>
     <td>frecuencia_base_procesador</td>
@@ -773,9 +761,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -807,7 +794,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código asignado al modelo de su producto ejemplo: MO_1, MO_03...</td>
+    <td>FK - id_modelos: Sr(a) en este campo podrá almacenar el código asignado al modelo de su producto</td>
 </tr>
 <tr>
     <td>precio</td>
@@ -833,7 +820,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código del procesador relacionado con el producto</td>
+    <td>FK - id_procesador: Sr(a) en este campo podrá almacenar el código del procesador relacionado con el producto</td>
 </tr>
 <tr>
     <td>id_pantalla</td>
@@ -846,7 +833,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el código de la pantalla del producto</td>
+    <td>FK - id_pantalla: Sr(a) en este campo podrá almacenar el código de la pantalla del producto</td>
 </tr>
 <table id='productos_has_almacenamiento'>
 <caption>productos_has_almacenamiento</caption>
@@ -855,9 +842,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -876,7 +862,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - serial_producto: Sr(a) en este campo podra evidenciar la relación entre producto y almacenamiento</td>
 </tr>
 <tr>
     <td>id_almacenamiento</td>
@@ -889,7 +875,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - id_almacenamiento: Sr(a) en este campo podra evidenciar la relación entre producto y almacenamiento</td>
 </tr>
 <table id='productos_has_grafica'>
 <caption>productos_has_grafica</caption>
@@ -898,9 +884,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -919,7 +904,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - serial_producto: Sr(a) en este campo podra evidenciar la relación entre producto y grafica</td>
 </tr>
 <tr>
     <td>id_grafica</td>
@@ -932,7 +917,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - id_grafica: Sr(a) en este campo podra evidenciar la relación entre producto y grafica</td>
 </tr>
 <table id='productos_has_memoria_ram'>
 <caption>productos_has_memoria_ram</caption>
@@ -941,9 +926,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -962,7 +946,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - serial_producto: Sr(a) en este campo podra evidenciar la relación entre producto y memoria_ram</td>
 </tr>
 <tr>
     <td>id_ram</td>
@@ -975,7 +959,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - id_ram: Sr(a) en este campo podra evidenciar la relación entre producto y memoria_ram</td>
 </tr>
 <table id='tiendas'>
 <caption>tiendas</caption>
@@ -984,9 +968,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -1044,7 +1027,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el número telefúnico para contactar a su tienda</td>
+    <td>Sr(a) en este campo podrá almacenar el número telefónico para contactar a su tienda</td>
 </tr>
 <tr>
     <td>email_tienda</td>
@@ -1057,7 +1040,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el número telefúnico para contactar a su tienda</td>
+    <td>Sr(a) en este campo podrá almacenar el correo electrónico de su tienda</td>
 </tr>
 <tr>
     <td>contraseña_tienda</td>
@@ -1079,9 +1062,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -1100,7 +1082,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - nit_tienda: Sr(a) en este campo podra almacenar la relación entre la tienda y el nit de la tienda</td>
 </tr>
 <tr>
     <td>productos_serial</td>
@@ -1113,7 +1095,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>FK - serial_producto: Sr(a) en este campo podra almacenar la relación entre producto y el serial del porducto</td>
 </tr>
 <table id='tipo_documento'>
 <caption>tipo_documento</caption>
@@ -1122,9 +1104,8 @@
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
     <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
@@ -1143,7 +1124,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar todos los tipos de documento en su abreviación ejemplo: CC - TI - CE...</td>
+    <td>Sr(a) en este campo podrá almacenar todos los tipos de documento en su abreviación ejemplo: CC, TI, CE...</td>
 </tr>
 <tr>
     <td>nombre_t_doc</td>
@@ -1156,10 +1137,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar todos los tipos de documento ejemplo: Cedula de Ciudadanía - Tarjeta de Identidad - Cedula de Extranjería</td>
+    <td>Sr(a) en este campo podrá almacenar todos los tipos de documento ejemplo: Cedula de Ciudadanía, Tarjeta de Identidad, Cedula de Extranjería...</td>
 </tr>
 <tr>
-    <td>estado</td>
+    <td>estado_tdoc</td>
     <td>TINYINT</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
