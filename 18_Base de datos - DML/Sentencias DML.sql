@@ -1,4 +1,4 @@
--- ADSI - 2395873
+ -- ADSI - 2395873
 -- CREATE USER "Grupo6"@"localhost" IDENTIFIED BY "BeginningRise654";
 -- GRANT ALL ON *.* TO "Grupo6"@"localhost" WITH GRANT OPTION;
 -- Usuario: Grupo6@localhost
@@ -151,3 +151,7 @@ INSERT INTO carrito(email_cliente, serial_producto, fecha_creacion, fecha_actual
 INSERT INTO ventas(id_ventas, email_cliente, nit_tienda, serial_producto, fecha) VALUES ('V_0001', 'dan_cassal6238@gmail.com', '901101602-6', 'FDN65X42188F395', CURDATE());
 INSERT INTO ventas(id_ventas, email_cliente, nit_tienda, serial_producto, fecha) VALUES ('V_0012', 'hug_camvar6943@gmail.com', '901101602-8', 'HHR35H66794A888', CURDATE());
 INSERT INTO ventas(id_ventas, email_cliente, nit_tienda, serial_producto, fecha) VALUES ('V_0033', 'lau_rodtor3699@gmail.com', '900924451-9', 'NXH2MALC313400', CURDATE());
+
+
+-- Joins
+SELECT ventas.id_ventas, persona.nombre_persona, clientes.direccion_cliente, tiendas.nombre_tienda, productos.id_modelo, productos.precio FROM ventas LEFT JOIN persona ON persona.email_persona = ventas.email_cliente LEFT JOIN clientes ON clientes.email_cliente = ventas.email_cliente LEFT JOIN tiendas ON tiendas.nit_tienda = ventas.nit_tienda LEFT JOIN productos ON productos.serial_producto = ventas.serial_producto;
