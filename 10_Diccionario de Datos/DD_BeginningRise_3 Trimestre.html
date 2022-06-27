@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="author" content="DicDat" />
     <meta name="description" content="BD BeginningRise" />
     <title>BeginningRise Diccionario</title>
@@ -25,28 +25,32 @@
         color: black;
     }
     td, th{
-        border-color: silver;
+        border-color: black;
     }
     tr:hover{
         color: #333;
         background-color: #F2F2F2;
     }
     th{
-        background-color: silver;
+        color: white;
+        background-color: rgb(12, 100, 122);
     }
     td{
-        color: gray;
+        color: black;
     }
     ul{
-        font-style: italic;
+        font-style: times new roman;
     }
     #title-sect{
-        color: gray;
-        text-align: right;
+        color: black;
+        text-align: center;
+        font-size: 28px;
+        font-style: times new roman;
     }
     .proj-desc{
         text-align: right;
     }
+    
     </style>
 </head>
 <body>
@@ -59,92 +63,83 @@
 <em></em>
 </p>
 </div>
+<div class="Indice">
 <h2>Índice</h2>
 <ul>
-<li><a href='#administradores'>administradores</a></li>
-<li><a href='#almacenamiento'>almacenamiento</a></li>
-<li><a href='#clientes'>clientes</a></li>
-<li><a href='#clientes_has_productos'>clientes_has_productos</a></li>
-<li><a href='#componentes'>componentes</a></li>
-<li><a href='#grafica'>grafica</a></li>
-<li><a href='#marcas'>marcas</a></li>
-<li><a href='#memoria_ram'>memoria_ram</a></li>
-<li><a href='#modelos'>modelos</a></li>
-<li><a href='#pantallas'>pantallas</a></li>
-<li><a href='#persona'>persona</a></li>
-<li><a href='#procesadores'>procesadores</a></li>
-<li><a href='#productos'>productos</a></li>
-<li><a href='#productos_has_almacenamiento'>productos_has_almacenamiento</a></li>
-<li><a href='#productos_has_grafica'>productos_has_grafica</a></li>
-<li><a href='#productos_has_memoria_ram'>productos_has_memoria_ram</a></li>
-<li><a href='#tiendas'>tiendas</a></li>
-<li><a href='#tiendas_has_productos'>tiendas_has_productos</a></li>
-<li><a href='#tipo_documento'>tipo_documento</a></li>
+<li><a href='#administradores'>Administradores</a></li>
+<li><a href='#almacenamiento'>Almacenamiento</a></li>
+<li><a href='#carrito'>Carrito</a></li>
+<li><a href='#clientes'>Clientes</a></li>
+<li><a href='#clientes_has_productos'>Clientes_has_productos</a></li>
+<li><a href='#componentes'>Componentes</a></li>
+<li><a href='#grafica'>Grafica</a></li>
+<li><a href='#marcas'>Marcas</a></li>
+<li><a href='#memoria_ram'>Memoria_ram</a></li>
+<li><a href='#modelos'>Modelos</a></li>
+<li><a href='#pantallas'>Pantallas</a></li>
+<li><a href='#persona'>Persona</a></li>
+<li><a href='#procesadores'>Procesadores</a></li>
+<li><a href='#productos'>Productos</a></li>
+<li><a href='#productos_has_almacenamiento'>Productos_has_almacenamiento</a></li>
+<li><a href='#productos_has_grafica'>Productos_has_grafica</a></li>
+<li><a href='#productos_has_memoria_ram'>Productos_has_memoria_ram</a></li>
+<li><a href='#tiendas'>Tiendas</a></li>
+<li><a href='#tiendas_has_productos'>Tiendas_has_productos</a></li>
+<li><a href='#tipo_documento'>Tipo_documento</a></li>
+<li><a href='#ventas'>Ventas</a></li>
 </ul>
+</div>
 <table id='administradores'>
-<caption>administradores</caption>
+<caption>Administradores</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
-    <td>tipo_doc_administrador</td>
+    <td>email_admiistrador</td>
     <td>VARCHAR(10)</td>
     <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>FK - tipo_documento_persona: Sr(a) en este campo podrá almacenar todos los tipos de documento en su abreviación ejemplo: CC, TI, CE...</td>
-</tr>
-<tr>
-    <td>num_doc_administrador</td>
-    <td>VARCHAR(10)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>FK - num_doc_persona: Sr(a) en este campo podrá almacenar el número de documento que certifique que es un administrador ejemplo: 1.006.366.455...</td>
+    <td>Sr(a) en este campo podrá almacenar el correo electronico perteneciente al administrador</td>
 </tr>
 <table id='almacenamiento'>
-<caption>almacenamiento</caption>
+<caption>Almacenamiento</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_almacenamiento</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -156,8 +151,8 @@
     <td>interfaz</td>
     <td>VARCHAR(5)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -165,54 +160,109 @@
     <td></td>
     <td>Sr(a) en este campo podrá almacenar el tipo de la interfaz de transferencia de datos que posee ejemplo: SATA, PCIe...</td>
 </tr>
-<table id='clientes'>
-<caption>clientes</caption>
+<table id='carrito'>
+<caption>Carrito</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
-    <td>tipo_doc_cliente</td>
-    <td>VARCHAR(10)</td>
+    <td>email_cliente</td>
+    <td>VARCHAR(45)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>FK - tipo_documento_persona: Sr(a) en este campo podrá almacenar el tipo de documento de identidad de que le pertenezca, por ejemplo: CC, CE, TI...</td>
+    <td>Sr(a) en este campo podrá almacenar el correo electronico del cliente.</td>
 </tr>
 <tr>
-    <td>num_doc_cliente</td>
-    <td>VARCHAR(10)</td>
+    <td>serial_producto</td>
+    <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>FK - num_doc_persona: Sr(a) en este campo podrá almacenar el número de su documento de identidad como cliente</td>
+    <td>Sr(a) en este campo podrá almacenar el serial del producto seleccionado a añadir a la base de datos ejemplo: SXD62R41589I235</td>
+</tr>
+<tr>
+    <td>fecha_creacion</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha de creacion del producto elegido.</td>
+</tr>
+<tr>
+    <td>fecha_actualización</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha de actualizacion del producto elegido.</td>
+</tr>
+<table id='clientes'>
+<caption>Clientes</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Descripción</th>
+</tr>
+<tr>
+    <td>email_cliente</td>
+    <td>VARCHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>FK - email_persona: Sr(a) en este campo podrá almacenar el correo electronico perteneciente al cliente, por pirmera y unica vez.</td>
 </tr>
 <tr>
     <td>direccion_cliente</td>
     <td>VARCHAR(40)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -224,8 +274,8 @@
     <td>telefono_cliente</td>
     <td>BIGINT(10)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -234,27 +284,27 @@
     <td>Sr(a) en este campo podrá almacenar el número telefónico de contacto personal ejemplo: 3204564663...</td>
 </tr>
 <table id='clientes_has_productos'>
-<caption>clientes_has_productos</caption>
+<caption>Clientes_has_productos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>tipo_doc_cliente</td>
     <td>VARCHAR(10)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -267,7 +317,7 @@
     <td>VARCHAR(10)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -280,7 +330,7 @@
     <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -289,27 +339,27 @@
     <td>FK - serial_producto: Sr(a) en este campo podra evidenciar la relación entre cliente y producto</td>
 </tr>
 <table id='componentes'>
-<caption>componentes</caption>
+<caption>Componentes</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_componente</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -321,8 +371,8 @@
     <td>componente</td>
     <td>VARCHAR(25)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -331,27 +381,27 @@
     <td>Sr(a) en este campo podrá almacenar el nombre del componente en específico, por ejemplo: RAM, GRÁFICA...</td>
 </tr>
 <table id='grafica'>
-<caption>grafica</caption>
+<caption>Grafica</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_grafica</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -363,8 +413,8 @@
     <td>vram_grafica</td>
     <td>VARCHAR(10)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -373,27 +423,27 @@
     <td>Sr(a) en este campo podrá almacenar la información de la memoria de la tarjeta grafica ejemplo 8GB VRAm, 4GB VRAM...</td>
 </tr>
 <table id='marcas'>
-<caption>marcas</caption>
+<caption>Marcas</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_marcas</td>
     <td>VARCHAR(4)</td>
     <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -405,8 +455,8 @@
     <td>marca</td>
     <td>VARCHAR(15)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -418,8 +468,8 @@
     <td>estado</td>
     <td>TINYINT</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -428,27 +478,27 @@
     <td>Sr(a) en este campo podrá almacenar el estado de la marca ejemplo: 1= activo 0= inactivo.</td>
 </tr>
 <table id='memoria_ram'>
-<caption>memoria_ram</caption>
+<caption>Memoria_ram</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_ram</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -460,8 +510,8 @@
     <td>frecuencia_ram</td>
     <td>VARCHAR(8)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -470,27 +520,27 @@
     <td>Sr(a) en este campo podrá almacenar la frecuencia que maneja la memoria ram según sus especificaciones, por ejemplo: -3200MHz, 2666MHz...</td>
 </tr>
 <table id='modelos'>
-<caption>modelos</caption>
+<caption>Modelos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_modelos</td>
     <td>VARCHAR(4)</td>
     <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -502,8 +552,8 @@
     <td>modelo</td>
     <td>VARCHAR(20)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -515,8 +565,8 @@
     <td>id_marca</td>
     <td>VARCHAR(4)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -525,27 +575,27 @@
     <td>FK - id_marcas: Sr(a) en este campo podrá almacenar el código de la marca del producto que va ligado con el modelo</td>
 </tr>
 <table id='pantallas'>
-<caption>pantallas</caption>
+<caption>Pantallas</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_pantalla</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -557,8 +607,8 @@
     <td>tasa_refresco_pantalla</td>
     <td>VARCHAR(5)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -570,37 +620,37 @@
     <td>tama,o_pantalla</td>
     <td>VARCHAR(15)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Sr(a) en este campo podrá almacenar el tamaño que tiene cada una de las pantallas según su código ejemplo: 15.6", 17.3"...</td>
+    <td>Sr(a) en este campo podrá almacenar el tamaño que tiene cada FKa de las pantallas según su código ejemplo: 15.6", 17.3"...</td>
 </tr>
 <table id='persona'>
-<caption>persona</caption>
+<caption>Persona</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>tipo_documento_persona</td>
     <td>VARCHAR(10)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -611,9 +661,9 @@
 <tr>
     <td>num_doc_persona</td>
     <td>VARCHAR(10)</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -622,11 +672,11 @@
     <td>Sr(a) en este campo podrá almacenar el número de documentó de identidad de cada persona.</td>
 </tr>
 <tr>
-    <td>p_nombre_persona</td>
-    <td>VARCHAR(20)</td>
+    <td>nombre_persona</td>
+    <td>VARCHAR(68)</td>
+    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -635,51 +685,12 @@
     <td>Sr(a) en este campo podrá almacenar el primer nombre de la persona seleccionada</td>
 </tr>
 <tr>
-    <td>s_nombre_persona</td>
-    <td>VARCHAR(20)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Sr(a) en este campo podrá almacenar el segundo nombre de la persona seleccionada</td>
-</tr>
-<tr>
-    <td>p_apellido_persona</td>
-    <td>VARCHAR(20)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Sr(a) en este campo podrá almacenar el primer apellido de la persona seleccionada</td>
-</tr>
-<tr>
-    <td>s_apellido_persona</td>
-    <td>VARCHAR(20)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Sr(a) en este campo podrá almacenar el segundo apellido de la persona seleccionada</td>
-</tr>
-<tr>
     <td>email_persona</td>
     <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
@@ -690,37 +701,76 @@
     <td>contraseña_persona</td>
     <td>VARCHAR(45)</td>
     <td>&nbsp;</td>
+    <td>&nbsp;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Sr(a) en este campo podrá almacenar la contraseña para poder iniciar sesión con el rol respectivo en el aplicativo web</td>
 </tr>
+<tr>
+    <td>fecha_creacion</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha en la que fue creado su perfil.</td>
+</tr>
+<tr>
+    <td>fecha_actualización</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha en la que fue actualizado su perfil.</td>
+</tr>
+<tr>
+    <td>foto_perfil</td>
+    <td>BLOB</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar una foto para su perfil.</td>
+</tr>
 <table id='procesadores'>
-<caption>procesadores</caption>
+<caption>Procesadores</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>id_procesador</td>
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -732,8 +782,8 @@
     <td>frecuencia_base_procesador</td>
     <td>VARCHAR(8)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -745,8 +795,8 @@
     <td>frecuencia_turbo_procesador</td>
     <td>VARCHAR(8)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -754,29 +804,42 @@
     <td></td>
     <td>Sr(a) en este campo podrá almacenar la frecuencia turbo del procesador seleccionado ejemplo: 2.11GHz...</td>
 </tr>
+<tr>
+    <td>cache_procesador</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el cache de su procesador</td>
+</tr>
 <table id='productos'>
-<caption>productos</caption>
+<caption>Productos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>serial_producto</td>
     <td>VARCHAR(20)</td>
     <td>&#10004;</td>
+    <td>&nbsp;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
@@ -788,7 +851,7 @@
     <td>VARCHAR(4)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -800,8 +863,8 @@
     <td>precio</td>
     <td>INT</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -814,7 +877,7 @@
     <td>VARCHAR(8)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -827,36 +890,75 @@
     <td>VARCHAR(8)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>FK - id_pantalla: Sr(a) en este campo podrá almacenar el código de la pantalla del producto</td>
+<tr>
+    <td>fecha_creacion</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha en la que fue creado su producto.</td>
+</tr>
+<tr>
+    <td>fecha_actualización</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha en la que fue actualizado su producto.</td>
+</tr>
+<tr>
+    <td>imagen</td>
+    <td>BLOB</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar una foto para su producto.</td>
+</tr>
 </tr>
 <table id='productos_has_almacenamiento'>
-<caption>productos_has_almacenamiento</caption>
+<caption>Productos_has_almacenamiento</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>serial_producto</td>
     <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -869,7 +971,7 @@
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -878,27 +980,27 @@
     <td>FK - id_almacenamiento: Sr(a) en este campo podra evidenciar la relación entre producto y almacenamiento</td>
 </tr>
 <table id='productos_has_grafica'>
-<caption>productos_has_grafica</caption>
+<caption>Productos_has_grafica</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>serial_producto</td>
     <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -911,7 +1013,7 @@
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -920,27 +1022,27 @@
     <td>FK - id_grafica: Sr(a) en este campo podra evidenciar la relación entre producto y grafica</td>
 </tr>
 <table id='productos_has_memoria_ram'>
-<caption>productos_has_memoria_ram</caption>
+<caption>Productos_has_memoria_ram</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>serial_producto</td>
     <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -953,7 +1055,7 @@
     <td>VARCHAR(8)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -962,27 +1064,27 @@
     <td>FK - id_ram: Sr(a) en este campo podra evidenciar la relación entre producto y memoria_ram</td>
 </tr>
 <table id='tiendas'>
-<caption>tiendas</caption>
+<caption>Tiendas</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>nit_tienda</td>
     <td>VARCHAR(11)</td>
     <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -994,8 +1096,8 @@
     <td>nombre_tienda</td>
     <td>VARCHAR(30)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1007,8 +1109,8 @@
     <td>direccion_tienda</td>
     <td>VARCHAR(40)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1020,8 +1122,8 @@
     <td>telefono_tienda</td>
     <td>BIGINT(10)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1033,8 +1135,8 @@
     <td>email_tienda</td>
     <td>VARCHAR(45)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1046,8 +1148,8 @@
     <td>contraseña_tienda</td>
     <td>VARCHAR(45)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1055,28 +1157,54 @@
     <td></td>
     <td>Sr(a) en este campo podrá almacenar la contraseña de acceso al sistema de su tienda</td>
 </tr>
+<tr>
+    <td>fecha_creacion</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha de creacion de la tienda.</td>
+</tr>
+<tr>
+    <td>fecha_actualización</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar la fecha de actualiazación de la tienda.</td>
+</tr>
 <table id='tiendas_has_productos'>
-<caption>tiendas_has_productos</caption>
+<caption>Tiendas_has_productos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>tiendas_nit_tienda</td>
     <td>VARCHAR(11)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1089,7 +1217,7 @@
     <td>VARCHAR(20)</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
-    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1098,27 +1226,27 @@
     <td>FK - serial_producto: Sr(a) en este campo podra almacenar la relación entre producto y el serial del porducto</td>
 </tr>
 <table id='tipo_documento'>
-<caption>tipo_documento</caption>
+<caption>Tipo_documento</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
     <th><abbr title='No Nulo'>NN</abbr></th>
     <th><abbr title='Único'>UQ</abbr></th>
     <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
     <th><abbr title='Zero Fill'>ZF</abbr></th>
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
-    <th>Commentarios</th>
+    <th>Descripción</th>
 </tr>
 <tr>
     <td>t_doc</td>
     <td>VARCHAR(10)</td>
     <td>&#10004;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1130,8 +1258,8 @@
     <td>nombre_t_doc</td>
     <td>VARCHAR(40)</td>
     <td>&nbsp;</td>
-    <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1143,8 +1271,89 @@
     <td>estado_tdoc</td>
     <td>TINYINT</td>
     <td>&nbsp;</td>
+    <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar los estados de los tipos de documento ejemplo: 1= activo 0= inactivo.</td>
+</tr>
+<table id='ventas'>
+<caption>Ventas</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='Llave Foranéa'>FK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Descripción</th>
+</tr>
+<tr>
+    <td>id_ventas</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el numero que indentifica a las ventas de las tiendas.</td>
+</tr>
+<tr>
+    <td>email_cliente</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el correo electronico del cliente.</td>
+</tr>
+<tr>
+    <td>nit_tienda</td>
+    <td>VARCHAR(11)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el número que identifica legalmente a su tienda.</td>
+</tr>
+<tr>
+    <td>serial_producto</td>
+    <td>VARCHAR(11)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Sr(a) en este campo podrá almacenar el serial del producto seleccionado a añadir a la base de datos ejemplo: SXD62R41589I235.</td>
+</tr>
+<tr>
+    <td>fecha</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
