@@ -153,5 +153,5 @@ INSERT INTO ventas(id_ventas, email_cliente, nit_tienda, serial_producto, fecha)
 INSERT INTO ventas(id_ventas, email_cliente, nit_tienda, serial_producto, fecha) VALUES ('V_0033', 'lau_rodtor3699@gmail.com', '900924451-9', 'NXH2MALC313400', CURDATE());
 
 
--- Joins
+-- Join
 SELECT ventas.id_ventas, persona.nombre_persona, clientes.direccion_cliente, tiendas.nombre_tienda, productos.id_modelo, productos.precio FROM ventas LEFT JOIN persona ON persona.email_persona = ventas.email_cliente LEFT JOIN clientes ON clientes.email_cliente = ventas.email_cliente LEFT JOIN tiendas ON tiendas.nit_tienda = ventas.nit_tienda LEFT JOIN productos ON productos.serial_producto = ventas.serial_producto;
